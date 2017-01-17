@@ -5,8 +5,11 @@ from . import views
 pub_router = routers.DefaultRouter()
 pub_router.register(r'publications', views.PublicationViewSet)
 
-urlpatterns = [
-    url(r'^', include(pub_router.urls)),
-]
+urlpatterns = []
 
+urlpatterns += pub_router.urls
 
+#
+# urlpatterns = [
+#     url(r'^', include(pub_router.urls, namespace='kzip')),
+# ]

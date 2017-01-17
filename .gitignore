@@ -94,3 +94,4 @@ ENV/
 /kz
 /kz.pub
 .idea/
+/kzipproj/db.sqlite3

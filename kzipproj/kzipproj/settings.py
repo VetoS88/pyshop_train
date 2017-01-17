@@ -81,23 +81,23 @@ WSGI_APPLICATION = 'kzipproj.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'kzbase',
-        'USER': 'kzuser',
-        'PASSWORD': 'qweasdzxc',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'kzbase',
+#         'USER': 'kzuser',
+#         'PASSWORD': 'qweasdzxc',
+#         'HOST': '',
+#         'PORT': '',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -137,10 +137,10 @@ STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'users.ExtUser'
 
-EMAIL_HOST = ''
-EMAIL_PORT = 2525
-EMAIL_HOST_USER = ""
-EMAIL_HOST_PASSWORD = ""
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "mailertest316@gmail.com"
+EMAIL_HOST_PASSWORD = "Q123456789"
 EMAIL_USE_TLS = True
 
 SERVER_EMAIL = EMAIL_HOST_USER
